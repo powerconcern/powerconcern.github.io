@@ -15,7 +15,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2, h3 {
-  color: var(--pc-primary);
+  color: #3D7A8A;
+}
+
+.section-header h2,
+.section-header h3 {
+  color: #c4dae4;
 }
 
 a {
