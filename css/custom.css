@@ -1,0 +1,190 @@
+/* ===== BASE ===== */
+:root {
+  --pc-primary: #8797AD;
+  --pc-dark: #343a40;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  color: #212529;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h2, h3 {
+  color: var(--pc-primary);
+}
+
+a {
+  color: var(--pc-primary);
+}
+
+a:hover {
+  color: var(--pc-dark);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  transition: background-color 0.3s;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.nav-link {
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 0.5rem 1rem !important;
+}
+
+.nav-link:hover {
+  color: var(--pc-primary) !important;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  background-image: url('../Images/main-sko.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero .container {
+  z-index: 1;
+}
+
+/* ===== SECTION HEADERS (background images) ===== */
+.section-header {
+  padding: 4rem 0;
+}
+
+.section-label {
+  font-size: 0.8em;
+  font-weight: 400;
+  letter-spacing: 0.8em;
+  text-transform: uppercase;
+}
+
+.bg-about {
+  background: url('../Images/bg/bg10.jpg') center/cover no-repeat;
+}
+
+.bg-products {
+  background: url('../Images/bg/bg3.png') center/cover no-repeat;
+}
+
+.bg-team {
+  background: url('../Images/bg/bg4.jpg') center/cover no-repeat;
+}
+
+.bg-careers {
+  background: url('../Images/bg/bg12.jpg') center/cover no-repeat;
+}
+
+.bg-faq {
+  background: url('../Images/bg/bgFaq.jpg') center/cover no-repeat;
+}
+
+.bg-contact {
+  background: url('../Images/bg/bg7.jpg') center/cover no-repeat;
+}
+
+/* ===== CARDS ===== */
+.card {
+  border-radius: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-img-top {
+  max-height: 200px;
+  object-fit: contain;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  border-radius: 0;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--pc-primary);
+  --bs-btn-border-color: var(--pc-primary);
+  --bs-btn-hover-bg: var(--pc-primary);
+  --bs-btn-hover-border-color: var(--pc-primary);
+  --bs-btn-hover-color: #fff;
+}
+
+/* ===== ACCORDION ===== */
+.accordion-button:not(.collapsed) {
+  background-color: rgba(135, 151, 173, 0.1);
+  color: var(--pc-dark);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.15rem rgba(135, 151, 173, 0.4);
+}
+
+.accordion-button {
+  font-weight: 600;
+}
+
+/* ===== FOOTER ===== */
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  opacity: 0.7;
+}
+
+/* ===== PAGE SECTIONS (show/hide) ===== */
+.page-section {
+  display: none;
+}
+
+.page-section.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-hidden {
+  display: none !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-header {
+    padding: 3rem 0;
+  }
+}
